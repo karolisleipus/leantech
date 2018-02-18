@@ -1,0 +1,45 @@
+<div class="dialog-container">
+  <button type="button" [mat-dialog-close] class="close-btn" mat-icon-button>
+    <mat-icon>clear</mat-icon>
+  </button>
+  <mat-dialog-content>
+    <mat-card class="dialog-box">
+      <mat-card-title>
+        <h2>Your details here</h2>
+      </mat-card-title>
+      <form #f="ngForm" (ngSubmit)="save(f.value)" id="contact-form">
+        <mat-form-field id="name-form-field">
+          <input matInput ngModel name="firstName" #firstName="ngModel" id="name" placeholder="Name" required />
+          <mat-error *ngIf="firstName.touched && !firstName.valid">
+            Name is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field id="phone-form-field">
+          <input matInput ngModel name="phone" #phone="ngModel" id="phone" placeholder="Phone" />
+        </mat-form-field>
+        <mat-form-field id="email-form-field">
+          <input matInput ngModel name="emailAddress" #emailAddress="ngModel" id="email" placeholder="Email" required email/>
+          <mat-error *ngIf="emailAddress.touched && !emailAddress.valid">
+            <div *ngIf="emailAddress.errors.required">
+              Email address is required
+            </div>
+            <div *ngIf="emailAddress.errors.email">
+              Please enter a valid email address
+            </div>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field id="message-form-field">
+          <textarea matInput ngModel name="message" #message="ngModel" id="message" placeholder="Your Message"></textarea>
+        </mat-form-field>
+        <p>
+          *Required
+        </p>
+        <div class="controls">
+          <mat-checkbox ngModel name="checkbox" #checkbox="ngModel" required>Agree on terms</mat-checkbox>
+          <button mat-raised-button [disabled]="!f.valid" color="warn">Save</button>
+          <a href="#">Terms and conditions</a>
+        </div>
+      </form>
+    </mat-card>
+  </mat-dialog-content>
+</div>

@@ -1,0 +1,31 @@
+#products{
+  h1{
+
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  };
+  .products-content{
+    ul{
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      li{
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+        a{
+          img{
+
+          }
+        };
+        p{
+          text-align: left;
+        }
+      };
+    }
+  }
+}

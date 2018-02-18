@@ -1,0 +1,44 @@
+.dialog-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 600px;
+  .close-btn{
+    margin-left: auto;
+  };
+  mat-dialog-content{
+    padding: 0;
+    margin: 0 auto;
+    .dialog-box{
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      h2{
+        margin: 20px 0px 0px 0px;
+      };
+      p{
+        margin-bottom: 20px;
+      };
+      button{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width: 736px){
+  .dialog-container{
+    width: 100%;
+    margin: 0 auto;
+    mat-dialog-content{
+      .dialog-box{
+        align-items: center;
+        mat-card-title{
+          margin: 0 auto;
+          h2{
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

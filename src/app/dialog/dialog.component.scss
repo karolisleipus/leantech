@@ -1,0 +1,92 @@
+.dialog-container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 600px;
+  height: auto;
+  .close-btn {
+    margin-left: auto;
+  };
+  mat-dialog-content{
+    padding: 0;
+    margin: 0 auto;
+    .dialog-box {
+      display: flex;
+      flex-flow: column wrap;
+      padding: 0;
+      mat-card-title {
+        margin: auto;
+      };
+      #contact-form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0px 40px;
+        #name-form-field,
+        #phone-form-field,
+        #email-form-field,
+
+         {
+          min-width: 45%;
+          margin: 20px 0px;
+        }
+        #message-form-field {
+          width: 100%;
+          #message {
+            height: 100px;
+          }
+        };
+        p{
+          width: 100%;
+        }
+        .controls{
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+          mat-checkbox,
+          a{
+            padding: 40px;
+          };
+          button{
+            padding: 10px 0px;
+            margin: 0px 30px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-device-width : 736px){
+  .dialog-container{
+    width: 100%;
+    margin: 0 auto;
+    mat-dialog-content{
+      .dialog-box{
+        mat-card-title{
+          h2{
+            font-size: 28px;
+          }
+        }
+        #contact-form{
+          justify-content: center;
+          margin: 0 20px;
+          #name-form-field,
+          #phone-form-field,
+          #email-form-field{
+            min-width: 100%;
+          };
+          .controls{
+            a{
+              padding-left: 0;
+              padding-right: 0;
+              margin: auto;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+}

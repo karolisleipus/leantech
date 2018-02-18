@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <a id = 'logo'>
+    <img src = './../assets/Logo.jpg' />
+  </a>
+  <span class='fill-space'></span>
+  <mat-nav-list fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <a mat-list-item href = '#'>Home</a>
+    <a mat-list-item href = '#products'>Products</a>
+    <a mat-list-item href = '#case'>Case</a>
+    <a mat-list-item href = '#'>Contact</a>
+  </mat-nav-list>
+  <button mat-button [matMenuTriggerFor]="menu" fxHide="false" fxHide.gt-sm>
+     <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+    <a mat-menu-item href="#">Home</a>
+    <a mat-menu-item href="#products">Products</a>
+    <a mat-menu-item href="#case">Case</a>
+    <a mat-menu-item href="#">Contact</a>
+</mat-menu>

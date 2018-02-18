@@ -1,0 +1,47 @@
+#hero{
+  background-image: url("../../assets/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  .hero-content{
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 150px;
+    float: left;
+  };
+  h1{
+    color: #fff;
+    padding-bottom: 30px;
+  };
+  p{
+    color: #fff;
+    max-width: 30%;
+    padding-bottom: 30px;
+  };
+  button{
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-device-width : 736px){
+  p{
+    min-width: 80%;
+  }
+}
+@media only screen and (max-device-width : 480px){
+  #hero{
+    height: 100vh;
+    .hero-content{
+      margin: 0 auto;
+      padding-left: 0;
+      float: none;
+      text-align: center;
+    };
+    p{
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
